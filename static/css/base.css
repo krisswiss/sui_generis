@@ -8,7 +8,6 @@ body {
     background-size: cover;
     height: calc(100vh - 16.4rem);
     color: black;
-    background-color: red;
     font-family: 'Inter';
 }
 
@@ -61,7 +60,6 @@ body {
 .bg-black {
     background: #000 !important;
 }
-
 
 
 /* -------------------------------- Media Queries */
