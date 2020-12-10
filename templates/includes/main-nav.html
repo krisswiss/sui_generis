@@ -17,12 +17,12 @@
                 Ready Made Hampers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">For him</a>
-                <a href="" class="dropdown-item">For her</a>
-                <a href="" class="dropdown-item">Wedding</a>
-                <a href="" class="dropdown-item">Baby</a>
-                <a href="" class="dropdown-item">Seasonal Specials</a>
-                <a href="" class="dropdown-item">All hampers</a>
+                <a href="{% url 'products' %}?category=hampers_for_him" class="dropdown-item">For him</a>
+                <a href="{% url 'products' %}?category=hampers_for_her" class="dropdown-item">For her</a>
+                <a href="{% url 'products' %}?category=hampers_for_wedding" class="dropdown-item">Wedding</a>
+                <a href="{% url 'products' %}?category=hampers_for_baby" class="dropdown-item">Baby</a>
+                <a href="{% url 'products' %}?category=hampers_seasonal_specials" class="dropdown-item">Seasonal Specials</a>
+                <a href="{% url 'products' %}?category=hampers_for_him,hampers_for_her,hampers_for_wedding,hampers_for_baby,hampers_seasonal_specials" class="dropdown-item">All hampers</a>
             </div>
         </li>
 
@@ -31,14 +31,14 @@
                 Create your own
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Confectionery</a>
-                <a href="" class="dropdown-item">Drinks</a>
-                <a href="" class="dropdown-item">Food</a>
-                <a href="" class="dropdown-item">Baby Items</a>
-                <a href="" class="dropdown-item">Cosmetics</a>
-                <a href="" class="dropdown-item">Ornaments &amp; Textiles</a>
-                <a href="" class="dropdown-item">Greeting Cards</a>
-                <a href="" class="dropdown-item">All products</a>
+                <a href="{% url 'products' %}?category=confectionery" class="dropdown-item">Confectionery</a>
+                <a href="{% url 'products' %}?category=drinks" class="dropdown-item">Drinks</a>
+                <a href="{% url 'products' %}?category=food" class="dropdown-item">Food</a>
+                <a href="{% url 'products' %}?category=baby_items" class="dropdown-item">Baby Items</a>
+                <a href="{% url 'products' %}?category=cosmetics" class="dropdown-item">Cosmetics</a>
+                <a href="{% url 'products' %}?category=ornaments" class="dropdown-item">Ornaments &amp; Textiles</a>
+                <a href="{% url 'products' %}?category=greeting_cards" class="dropdown-item">Greeting Cards</a>
+                <a href="{% url 'products' %}?category=confectionery,drinks,food,baby_items,cosmetics,ornaments,greeting_cards" class="dropdown-item">All products</a>
             </div>
         </li>
     </ul>
