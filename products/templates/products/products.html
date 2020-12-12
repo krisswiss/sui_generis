@@ -45,7 +45,7 @@
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                
-                                {% if category == drinks %}
+                                {% if products.category == drinks %}
                                 <span class="small"><a href="{% url 'products' %}?category=confectionery,drinks,food,baby_items,cosmetics,ornaments,greeting_cards">All Products</a> | </span>
                                 {% else %}
                                 <span class="small"><a href="{% url 'products' %}?category=hampers_for_him,hampers_for_her,hampers_for_wedding,hampers_for_baby,hampers_seasonal_specials">All Hampers</a> | </span>
