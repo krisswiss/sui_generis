@@ -6,7 +6,7 @@ html {
 body {
     background: url('/media/pexels-giftpunditscom-1303088.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 16.4rem);
+    height: calc(100vh - 164px);
     color: black;
     font-family: 'Inter';
 }
@@ -71,6 +71,17 @@ body {
     z-index: -1;
 }
 
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -92,17 +103,17 @@ body {
     }
 
     .header-container {
-        padding-top: 16.4rem;
+        padding-top: 164px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 16.4rem;
+        padding-top: 164px;
     }
 
     body {
-        height: calc(100vh - 16.4rem);
+        height: calc(100vh - 164px);
     }
 }
