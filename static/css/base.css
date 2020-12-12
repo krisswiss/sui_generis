@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    width: 100%;
     scroll-behavior: smooth;
 }
 
@@ -51,6 +52,23 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
 }
 
 .border-black {
