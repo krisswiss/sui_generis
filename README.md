@@ -74,5 +74,12 @@ To create a premium brand offering unique, handmade hampers that users can build
   - add, edit or remove faq section
   - add, edit or remove social links
 
+### Design
+Website has been built with [Bootstrap](https://www.bootstrapcdn.com/) components. I have chosen it chosen for this project for its modern interface, ease of use and ability to be easily customized. It is used for creating features such as navbar, cards, forms, modals, as well as for the layout(grid).
+### Color Scheme
+Choice of colors was dictated by premium appeal of the brand.
 
+### Wireframes
+
+Original wireframes for desktop, tablet and mobile can be found [here](https://github.com/krisswiss/sui_generis/tree/master/wireframes).
 
