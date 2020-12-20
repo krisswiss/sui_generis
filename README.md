@@ -121,10 +121,10 @@ During the development phase I worked with sqlite3 database which is installed w
 For deployment(production), a PostgreSQL database is provided by Heroku as an add-on.
 * [PostgreSQL](https://www.postgresql.org/)
 * [Sqlite3](https://www.sqlite.org/index.html)
+
 ### Data Modelling
 #### Products App
 ##### Product
-
 | **Name** | **Field Type** | **Validation** |
 --- | --- | --- 
  category | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL
@@ -136,8 +136,54 @@ For deployment(production), a PostgreSQL database is provided by Heroku as an ad
  image| ImageField | null=True, blank=True
  in_stock | BooleanField | default=True, null=True, blank=True
 
- ##### Category
+##### Category
 | **Name** | **Field Type** | **Validation** |
 --- | --- | --- 
 name | CharField | max_length=254
 friendly_name | CharField | max_length=254, null=True, blank=True
+
+#### Profile App
+##### Profile
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+ user | OneToOneField 'User' |  on_delete=models.CASCADE
+ profile_phone_number | CharField | max_length=20, null=True, blank=True
+ profile_address1 | CharField | max_length=80, null=True, blank=True
+ profile_address2 | CharField | max_length=40, null=True, blank=True
+ profile_town_or_city | CharField | max_length=80, null=True, blank=True
+ profile_county | CharField | max_length=50, null=True, blank=True
+ profile_postcode | CharField | max_length=20, null=True, blank=True
+ profile_country | CountryField | blank_label='Country', null=True, blank=True
+
+#### Checkout App
+##### Order
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+ order_number | CharField | max_length=32, null=False, editable=False
+ user_profile | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+ full_name | CharField | max_length=50, null=False, blank=False
+ email | EmailField | max_length=254, null=False, blank=False
+ phone_number | CharField | max_length=20, null=False, blank=False
+ country | CharField | blank_label='Country *', null=False, blank=False
+ postcode | CharField | max_length=20, null=True, blank=True
+ town_or_city | CountryField | max_length=40, null=False, blank=False
+ street_address1 | CharFieldmax | max_length=80, null=False, blank=False
+ street_address2 | CharField | max_length=80, null=True, blank=True
+ county | CharField | max_length=80, null=True, blank=True
+ date | DateTimeField | auto_now_add=True
+ delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0
+ order_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+ grand_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+ original_bag | TextField | null=False, blank=False, default=''
+ stripe_pid | CharField | max_length=254, null=False, blank=False, default=''
+
+##### OrderLineItem
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+order | ForeignKey | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
+product | ForeignKey | Product, null=False, blank=False, on_delete=models.CASCADE
+quantity | IntegerField | null=False, blank=False, default=0
+lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+
+   
+    
