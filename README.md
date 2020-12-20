@@ -116,3 +116,28 @@ Original wireframes for desktop, tablet and mobile can be found [here](https://g
 
 
 ## Information Architecture
+### Database Choice
+During the development phase I worked with sqlite3 database which is installed with Django.
+For deployment(production), a PostgreSQL database is provided by Heroku as an add-on.
+* [PostgreSQL](https://www.postgresql.org/)
+* [Sqlite3](https://www.sqlite.org/index.html)
+### Data Modelling
+#### Products App
+##### Product
+
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+ category | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL
+ sku | CharField | max_length=254, null=True, blank=True
+ name | CharField | max_length=254 
+ description | TextField | 
+ price | DecimalField |max_digits=6, decimal_places=2] 
+ image_url | URLField | max_length=1024, null=True, blank=True
+ image| ImageField | null=True, blank=True
+ in_stock | BooleanField | default=True, null=True, blank=True
+
+ ##### Category
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+name | CharField | max_length=254
+friendly_name | CharField | max_length=254, null=True, blank=True
