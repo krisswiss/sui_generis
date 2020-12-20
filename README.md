@@ -5,6 +5,41 @@ The aim of the company is to offer customers a unique shopping experience by giv
 
 Stock images have been used for this project but the companies aim would be to offer brands that are not in the mainstream market which would then truly reflect the name Sui Generis.
 
+
+---
+
+
+## Table of Contents
+1. [**UX**](#ux)
+    - [**Project Goals**](#project-goals)
+    - [**User Stories**](#user-stories)
+    - [**Design**](#design)
+    - [**Wireframes**](#wireframes)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
+3. [**Information Architecture**](#information-architecture)
+    - [**Database Choice**](#database-choice)
+    - [**Data Modelling**](#data-modelling)
+
+4. [**Technologies Used**](#technologies-used)
+    - [**Languages**](#languages)
+    - [**Libraries and Frameworks**](#libraries-and-frameworks)
+    - [**Tools**](#tools)
+    - [**Databases**](#databases)
+
+5. [**Testing**](#testing)
+6. [**Deployment**](#deployment)
+    - [**Local Deployment**](#local-deployment)
+    - [**Heroku Deployment**](#heroku-deployment)
+
+7. [**Credits**](#credits)
+    - [**Code**](#code)
+    - [**Content and Media**](#content-and-media)
+    - [**Acknowledgements**](#acknowledgements)
+8. [**Disclaimer**](#disclaimer)
+
 ## UX
 ### User Stories
 - As a **shopper** I want to:
