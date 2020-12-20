@@ -247,7 +247,7 @@ Note: You can read more information about the cloning process on the [GitHub Hel
 
 2. Set up environment variables.     
 Note, that this process will be different depending on IDE you use.   
-In this one it was done using Gitpod IDE Setting in the following way:      
+In this one it was done using Gitpod IDE Settings in the following way:      
     - in GitPod Settings press Add Variable button
     - in Name column, put name of the environment variable
     - in Value column, put the value for the variable
@@ -255,14 +255,14 @@ In this one it was done using Gitpod IDE Setting in the following way:
     
 Variables have then been imported in settings.py:
 
-    ```bash 
+    
     import os  
     os.environ["DEVELOPMENT"] = "True"    
     os.environ["SECRET_KEY"] = "<Your Secret key>"    
     os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public key>"    
     os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret key>"    
     os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"
-     ```
+
        
 Read more about how to set up the Stripe keys in the [Stripe Documentation](https://stripe.com/docs/keys)
     
@@ -271,7 +271,7 @@ Read more about how to set up the Stripe keys in the [Stripe Documentation](http
 4. In the terminal in your IDE migrate the models to crete a database using the following commands:    
 `python3 manage.py makemigrations`     
 `python3 manage.py migrate`     
-5. Load the data fixtures(**categories**, **products**, **itinerary**, **itinerary_items**, **events**) in that order into the database using the following command:    
+5. Load the data fixtures(**categories**, **products**) in that order into the database using the following command:    
 `python3 manage.py loaddata <fixture_name>`        
 6. Create a superuser to have an access to the the admin panel(you need to follow the instructions then and insert username,email and password):    
 `python3 manage.py createsuperuser`   
@@ -315,7 +315,7 @@ You can temporary comment out the current database settings code and just paste 
         'default': dj_database_url.parse("<your Postrgres database URL here>")     
     }
   ```
-Important Note: that's just temporary set up, this URL **should not be committed and published to GitHub** for security reasons, so make sure not to commit your changes to Git while the URL is in the settings.py.     
+Important Note: that's just temporary set up, this URL **should not be committed and published to GitHub** for security reasons, so makse sure not to commit your changes to Git while the URL is in the settings.py.     
 9. Migrate the database models to the Postgres database using the following commands in the terminal:    
 `python3 manage.py makemigrations`     
 `python3 manage.py migrate`     
