@@ -83,3 +83,36 @@ Choice of colors was dictated by premium appeal of the brand.
 
 Original wireframes for desktop, tablet and mobile can be found [here](https://github.com/krisswiss/sui_generis/tree/master/wireframes).
 
+
+---
+
+
+## Features
+
+### Existing Features
+
+* Navigation(fixed at the top) containing:
+  * links to access all sections(home, about us, hampers, products)
+  * searchbox to serch for products by name
+  * my account button
+  * cart
+* Home:
+  * Button to show current specials
+* Products view which:
+  * displays ready made hampers and individual products
+  * contains sorting by: category, name, price
+* My Account:
+  * Users can register, login and view their details and history of the orders
+  * Admin / staff can modify products
+* Cart:
+  * products can be added, viewed, modified or removed
+  * delivery threshold is being automatically calculated
+* Checkout:
+  * users can pay for the products
+  * payments are being processed with Stripe
+  * confirmation emails are sent to the users
+
+### Features Left to Implement
+
+
+## Information Architecture
