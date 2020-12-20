@@ -12,6 +12,7 @@ Stock images have been used for this project but the companies aim would be to o
 ## Table of Contents
 1. [**UX**](#ux)
     - [**Project Goals**](#project-goals)
+    - [**Site Owner Goals**](#site-owner-goals)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
     - [**Wireframes**](#wireframes)
@@ -41,6 +42,10 @@ Stock images have been used for this project but the companies aim would be to o
 8. [**Disclaimer**](#disclaimer)
 
 ## UX
+### Project Goals
+The aim of the project is to create a ecommerce website where users can view, sort and choose different products in the gallery, get through the checkout process with their shopping bag and make a card payment through Stripe. The user can also create a personal profile where the can see all their historic order details.
+### Site Owner Goals
+To create a premium brand offering unique, handmade hampers that users can build from available products.
 ### User Stories
 - As a **shopper** I want to:
   - access website from any device
