@@ -16,7 +16,12 @@
 <div class="col-6"></div>
 <div class="col-6">
 <h3 class="warning">Frequently asked questions:</h3>
+{% for q in questions %}
 
+<strong><p>{{ q.question }}</p></strong>
+<p>{{ q.answer }}</p>
+
+{% endfor %}
 </div>
 </div>
 </div>
