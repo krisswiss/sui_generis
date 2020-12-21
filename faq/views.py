@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from faq.models import Faq
+from .models import Faq
 
 # Create your views here.
 
 
-def Faq(request):
+def all_faq(request):
     faq = Faq.objects.all()
     context = {
         'faq': faq

@@ -13,16 +13,17 @@
 <div class="overlay"></div>
 <div class="container">
 <div class="row">
-<div class="col-6"></div>
-<div class="col-6">
+<div class="col-2"></div>
+<div class="col-8">
 <h3 class="warning">Frequently asked questions:</h3>
-{% for q in questions %}
+{% for q in faq %}
 
 <strong><p>{{ q.question }}</p></strong>
 <p>{{ q.answer }}</p>
 
 {% endfor %}
 </div>
+<div class="col-2"></div>
 </div>
 </div>
 
