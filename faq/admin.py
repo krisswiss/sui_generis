@@ -8,6 +8,7 @@ class FaqAdmin(admin.ModelAdmin):
     list_display = (
         'question',
         'answer',
+        'id',
     )
 
 
