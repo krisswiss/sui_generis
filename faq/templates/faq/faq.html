@@ -12,14 +12,20 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
-<div class="row">
-<div class="col-2"></div>
-<div class="col-8">
-<h3 class="warning">Frequently asked questions:</h3>
-{% for q in faq %}
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h3 class="warning">Frequently asked questions:</h3>
 
+{% for q in faq %}
 <strong><p>{{ q.question }}</p></strong>
 <p>{{ q.answer }}</p>
+{% if request.user.is_superuser or request.user.is_staff %}
+<small class="ml-3">
+    <a href="{% url 'edit_question' q.id %}">Edit</a> |
+    <a class="text-danger" href="#">Delete</a>
+</small>
+{% endif %}
 
 {% endfor %}
 </div>
