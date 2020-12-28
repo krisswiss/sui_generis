@@ -57,3 +57,12 @@ def edit_question(request, faq_id):
         'question': question,
     }
     return render(request, template, context)
+
+
+def delete_question(request, faq_id):
+    """ Delete a question in FAQ """
+
+    question = get_object_or_404(Faq, pk=faq_id)
+    question.delete()
+    messages.success(request, 'Question deleted!')
+    return redirect('all_faq')

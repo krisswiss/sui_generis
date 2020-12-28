@@ -23,7 +23,7 @@
 {% if request.user.is_superuser or request.user.is_staff %}
 <small class="ml-3">
     <a href="{% url 'edit_question' q.id %}">Edit</a> |
-    <a class="text-danger" href="#">Delete</a>
+    <a class="text-danger" href="{% url 'delete_question' q.id %}">Delete</a>
 </small>
 {% endif %}
 
