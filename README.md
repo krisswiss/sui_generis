@@ -51,32 +51,39 @@ The aim of the project is to create a ecommerce website where users can view, so
 ### Site Owner Goals
 To create a premium brand offering unique, handmade hampers that users can build from available products.
 ### User Stories
-- As a **shopper** I want to:
-  - access website from any device
-  - view a list of all products so I can identify product, price and see picture
-  - view individual product details
-  - view a list of products within certain category
-  - view a list of products sorted by name, price or category
-  - search products by name in a serachbox
-  - have an overview of my shopping bag and total amount to pay
-  - modify or remove products in shopping bag
-  - see updated shopping bag
-  - easily and secure pay for my shopping
-  - get order confirmation after payment/placing an order
-  - read more about the company
-  - contact the company directly
-  - follow the company on social media
-- As a **user** I want to:
-  - login anytime, so that I can get access to my saved profile details and make next purchase quicker
-  - see my order history
-  - see and/or update my delivery details
-  - be able to change my password, so that I can create the stronger password
-- As a **staff member / admin** I want to:
-  - have convenient and secure admin interface avalable only for website admin, so that I can add, edit and remove products
-  - receive emails from the users when they fill out the contact form, so that I can reply on them satisfying users queries
-  - be able to hide out of stock products from displaying to the users
-  - add, edit or remove faq section
-  - add, edit or remove social links
+
+##### Shopper
+  - As a user, I want to access website from any device
+  - As a user, I want to view a list of all products so I can identify product, price and see picture
+  - As a user, I want to view individual product details
+  - As a user, I want to view a list of products within certain category
+  - As a user, I want to view a list of products sorted by name, price or category
+  - As a user, I want to search products by name in a serachbox
+  - As a user, I want to have an overview of my shopping bag and total amount to pay
+  - As a user, I want to modify or remove products in shopping bag
+  - As a user, I want to see updated shopping bag
+  - As a user, I want to easily and secure pay for my shopping
+  - As a user, I want to get order confirmation after payment/placing an order
+  - As a user, I want to read more about the company
+  - As a user, I want to contact the company directly
+  - As a user, I want to follow the company on social media
+  - As a user, I want to read company blog
+##### Registered User
+  - As a user, I want to login anytime, so that I can get access to my saved profile details and make next purchase quicker
+  - As a user, I want to see my order history
+  - As a user, I want to see and/or update my delivery details
+##### Staff Member / Admin
+  - As a user, I want to have convenient and secure admin interface avalable only for website admin or staff member
+  - As a user, I want to be able to add products
+  - As a user, I want to be able to edit products
+  - As a user, I want to be able to remove products
+  - As a user, I want to receive emails from the users when they fill out the contact form, so that I can reply on them satisfying users queries
+  - As a user, I want to add question to faq section
+  - As a user, I want to edit question in faq section
+  - As a user, I want to remove question from faq section
+  - As a user, I want to add post to blog section
+  - As a user, I want to edit post in blog section
+  - As a user, I want to remove post from blog section
 
 ### Design
 Website has been built with [Bootstrap](https://www.bootstrapcdn.com/) components. I have chosen it chosen for this project for its modern interface, ease of use and ability to be easily customized. It is used for creating features such as navbar, cards, forms, modals, as well as for the layout(grid).
@@ -299,10 +306,10 @@ To deploy the project to [Heroku](https://heroku.com/) the following steps need 
 3. `git add`, `git commit` and `git push` these files to GitHub repository.     
 NOTE: these 1-3 steps already done in this project and included in the GitHub repository, but illistrated here as they are required for the successfull deployment to Heroku.        
 As well as that, other things that are required for the Heroku deployment and have to be installed: **gunicorn** (WSGI HTTP Server), **dj-database-url** for database connection and **Psycopg** (PostgreSQL driver for Python). All of the mentioned above are *already installed* in this project in the requirements.txt file.     
-4. On the [Heroku](https://heroku.com/) website you need to create a **new app**, assigne a name (must be unique),set a region to the closest to you(for my project I set Europe) and click **Create app**.   
+4. On the [Heroku](https://heroku.com/) website you need to create a **new app**, assign a name (must be unique),set a region to the closest to you(for my project I set Europe) and click **Create app**.   
 5. Go to **Resources** tab in Heroku, then in the **Add-ons** search bar look for **Heorku Postgres**(you can type `postgres`), select **Hobby Dev — Free** and click **Provision** button to add it to your project.     
 6. In Heroku **Settings** click on **Reveal Config Vars**.   
-7. Set the following config variables there:     
+7. Set the following config variables there (Postgres, database url, should be set automatically after instal from previous steps):     
 
 | KEY            | VALUE         |
 |----------------|---------------|
@@ -316,7 +323,7 @@ As well as that, other things that are required for the Heroku deployment and ha
 | STRIPE_SECRET_KEY| `<your stripe secret key>`  |
 | STRIPE_WH_SECRET| `<your stripe wh key>`  |
 | USE_AWS | `True`  |
-
+| DATABASE_URL | `postgres://<your link> `|
      
 8. Copy **DATABASE_URL's value**(Postrgres database URL) from the Convig Vars and temporary paste it into the default database in **settings.py**.     
 You can temporary comment out the current database settings code and just paste the following in the settings.py:   
