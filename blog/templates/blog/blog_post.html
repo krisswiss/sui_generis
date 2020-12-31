@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}| Blog {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <!-- Post -->
+    <div class="row mb-5">
+        <div class="col-8 offset-2 my-3 py-4 jumbotron jumbotron-mobile bg-white">
+            <h2 class="mt-2">{{ post.title }}</h2>
+            <p>{{ post.date }}</p>
+            <hr/>
+            {% if post.image %}
+            <a href="{{ post.image.url }}" target="_blank">
+            <img class="img-fluid" width="800" height="600" src="{{ post.image.url }}" alt="{{ post.title }}">
+            </a>
+            {% else %}
+            <img class="img-fluid" width="800" height="600" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+            {% endif %}
+            <hr/>
+            <p>{{ post.introduction }}</p>
+            <hr/>
+            <p>{{ post.post }}</p>
+            <p><a href="{% url 'all_posts' %}" class="btn btn-black rounded-0 mt-4">All posts</a></p>
+            {%if request.user.is_superuser or request.user.is_staff %}
+            <small class="ml-3">
+                <a href="{% url 'edit_post' post.id %}">Edit</a> |
+                <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
+            </small>
+            {% endif %}
+            <hr/>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
