@@ -89,6 +89,7 @@ To create a premium brand offering unique, handmade hampers that users can build
 Website has been built with [Bootstrap](https://www.bootstrapcdn.com/) components. I have chosen it chosen for this project for its modern interface, ease of use and ability to be easily customized. It is used for creating features such as navbar, cards, forms, modals, as well as for the layout(grid).
 ### Color Scheme
 Choice of colors was dictated by premium appeal of the brand.
+![Color Palette](wireframes/sui-generis-colors.png)
 
 ### Wireframes
 
@@ -505,21 +506,28 @@ In order to send real emails from the application, you need to connect it to you
 
 ## Credits
 ### Code
-- 
-- 
-- 
+  - The project's code was developed by following the [Code Institute](https://codeinstitute.net/) video lessons and based on the understanding of the Boutique Ado Django Mini-Project, which gave a great ground work to built on top. Project was customized, modified and enhanced to fit my projects purposes.
+  - Inspiration regarding the disign was taken from [PriorityPixels](https://prioritypixels.co.uk/50-best-luxury-websites/) article about 50 best luxury websites.
+  - [Stack Overflow](https://stackoverflow.com/) was used on daily bases to find solutions to errors and bugs.
+  - I also constantly referred to the following documentation sources during the development: [Django](https://docs.djangoproject.com/en/3.1/), [Stripe](https://stripe.com/docs).
+  - [Real Python](https://realpython.com/get-started-with-django-1/?fbclid=IwAR0GkcibvsDqGjNWBdYLAOUuyK-bYMsiJ1n6EcyMEcy9F2_aIbjYDINqAxE) - Get Started with Django Course
+  - [Full Stack Python](https://www.fullstackpython.com/django-db-models-datefield-examples.html) - for Django Models reference and examples
+  - [LEarn Djano](https://learndjango.com/tutorials/django-email-contact-form) - Django Email / Contact Form tutorial
+  - [Mini Web Tool](https://miniwebtool.com/django-secret-key-generator/) - for Django Secret Key Generator
 
 ### Content and Media
-- 
-- 
-- 
-
+  - [Pexels](https://www.pexels.com) 
+    - For the images used in the project.  
+  - [Amazon](https://www.amazon.com/) 
+    - For the product images used in the project.
 
 ### Acknowledgements
-    
--        
--
--       
+
+I would like to thank everyone who has helped me throughout the development of this project:  
+  - My Partner, Chakra O'Connor, for help with idea and design
+  - My Mentor, [Simen Daehlin](https://github.com/Eventyret) for his support, help, patience and guidance, very useful tips and advice!
+  - Tim, Michael, Miklos, Stephen, Anna, Sammy, Haley and other Code Institute tutors for their help to debug issues, assistance, support and patience!  
+  - Student care from Code Institute. For the support, guidance and feedback.  
 
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
