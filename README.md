@@ -269,6 +269,113 @@ icon | CharField | max_length=50
 
 ## Testing
 
+### Features Testing
+
+#### Login, sign up and sign out
+* __Test__  : User fills the form with required inputs and submits the form. Testing 
+that toast messages and redirection of page works correctly
+* __Result__ : User can login, sign up and sign out from the website, by navigating
+and using the forms and links.
+
+#### Searchbox
+*  __Test__ : Users can find a specific product, by typing in the searchbar and clicking on the button "search".
+Testing that connection setup and search works correctly
+* __Result__ : searchbar works as expected. When searching for a specific product by typing for a specific product, the product
+that the user search for, either is found or not
+
+#### Sort
+* __Test__ : Testing that sorting works as intended for the specific sorting choice
+* __Result__ : The user can sort products by price, name, rating or category 
+
+#### Adjust shopping bag
+* __Test__ : 
+Testing that increment and decreament functionality works as intended, also remove and update products from the shopping bag.
+* __Result__ : 
+The user can adjust their shopping bag, by addin, decreasing or remoing products from shopping bag
+
+#### Checkout process
+* __Test__ : 
+Testing that Stripe connection and card payment works as intended 
+* __Result__  : 
+The user can make a secure and smooth card payment in the checkout process
+##### Please use Stripe Test Card for this! 
+
+#### Order confirmation
+* __Test__ : 
+Testing that the users gets a correct order cnfirmation after checkout process
+Also that user can see and revisit order history in their profile page
+* __Result__  : 
+The user gets a order confirmation after payment and can see all their order history in their profile page.
+
+#### Contact us
+* __Test__ : 
+Testing that users can use the contact us form and gets a confirmation when sending the form
+* __Result__  : 
+The user gets redirected to 'thank you' template and email confirmation after sending the conctact form
+
+#### Blog
+* __Test__ : 
+Testing that users can display all blog posts and read every post individualy too
+* __Result__  : 
+The user can display all blog posts by clicking the blog link in the footer and then read each post by clicking read more button
+
+#### FAQ
+* __Test__ : 
+Testing that users can display and read all frequently asked questions page
+* __Result__  : 
+The user can display all FAQ by clinking in the Faq link located in the footer
+
+#### Navigation links
+* __Test__ : 
+Testing that all navigation links, on the navbar, buttons and backlinks works and redirects to correct url
+* __Result__  : 
+The user can navigate easily on the website by using the links, that redirects them to their intended destination
+
+#### Social Media Icons
+* __Test__ : Users can use social media links to navigate to the websites specific social media account.
+Testing that by clicking on social media link, the user gets navigated to the chosen social media account.
+* __Result__  : When clicking on social media icon, the user gets naviagated to the specific social media account. 
+
+#### Responsive Design
+* __Test__ : Users can use different devices to navigate on the website.
+Testing that the website works correctly on different devices and adjust on the responsive breakpoints.
+* __Result__  : The website is responsive on the different devices breakpoints and works correctly.
+
+##### Addiotional testing
+
+In addition to the above, all user stories have been tested individually and passed - both during development and after deployment.
+
+On top of that, full CRUD functioality has been tested for staff and superuser accounts to make sure that they can:
+  - add, display, modify, delete products
+  - add, display, modify, delete blog posts
+  - add, display, modify, delete frequently asked questions
+  - All of the above is easily accessible after logging in with staff or superuser account.
+
+Site has been tested for responsiveness with google inspect tool, but also on my own Laptop, tablet and mobile. 
+In addition to this, I have shared my link with several friends, including actively working software developers, who have tested it all on different devices (Sony Z5 compact, Samsung S8, Huawei P20lite), operating systems(windows, mac os) and browsers(chrome, safari, internet explorer) and confirmed they didn’t come across any issues with neither responsiveness or CRUD functionality.
+
+After applying each change to app.py I was manually testing every possible scenario to make sure it works. Every possible scenario has also been tested manually after deployment.
+
+##### Bugs
+##### Unresolved
+
+  - Footer is not fully responsive
+    - it accupies approx 90% of the width of the screen - tried to apply bootstrap class for width, but this didnt Help
+  - JavaScript code needs to be moved to external folders - outside of html code
+    - lack of time dictated prioritizing different parts 
+
+### Validators
+
+* [W3C Markup Validation](https://validator.w3.org/)
+    - Was used to check HTML5 validation.
+* [W3C CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Was used to check CSS3 validation.
+* [Esprima Syntax Validaton](https://esprima.org/index.html)
+    - Was used to check Javascript validation.
+* [Python syntax checker](https://extendsclass.com/python-tester.html)
+    - Was used to check Python validation.
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+    - Was used to for debugging. 
 
 ---
 
