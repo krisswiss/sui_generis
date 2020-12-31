@@ -67,7 +67,7 @@ def edit_post(request, post_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated post!')
-            return redirect('all_posts')
+            return redirect(reverse('each_post', args=[blog_post.id]))
         else:
             messages.error(request, 'Failed to update post. Please ensure the form is valid.')
     else:
