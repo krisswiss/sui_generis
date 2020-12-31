@@ -354,10 +354,10 @@ On top of that, full CRUD functioality has been tested for staff and superuser a
 Site has been tested for responsiveness with google inspect tool, but also on my own Laptop, tablet and mobile. 
 In addition to this, I have shared my link with several friends, including actively working software developers, who have tested it all on different devices (Sony Z5 compact, Samsung S8, Huawei P20lite), operating systems(windows, mac os) and browsers(chrome, safari, internet explorer) and confirmed they didn’t come across any issues with neither responsiveness or CRUD functionality.
 
-After applying each change to app.py I was manually testing every possible scenario to make sure it works. Every possible scenario has also been tested manually after deployment.
+After applying each change I was manually testing every possible scenario to make sure it works. Every possible scenario has also been tested manually after deployment.
 
 ##### Bugs
-##### Unresolved
+##### Unresolved (due to lack of time)
 
   - Footer is not fully responsive
     - it accupies approx 90% of the width of the screen - tried to apply bootstrap class for width, but this didnt Help
