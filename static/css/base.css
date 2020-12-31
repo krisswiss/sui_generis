@@ -50,13 +50,13 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: var(--verydarkpurple);
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: var(--verydarkpurple);
     color: white;
 }
 
@@ -66,7 +66,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: var(--purple);;
     color: white;
 }
 
@@ -76,13 +76,13 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: var(--verydarkpurple);
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: var(--verydarkpurple);
     color: white !important;
 }
 
@@ -92,7 +92,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: var(--purple);;
     color: white;
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 .bg-black {
-    background: #000 !important;
+    background: var(--verydarkpurple); !important;
 }
 
 .overlay {
@@ -115,7 +115,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: var(--purple) !important;
     color: #fff !important;
 }
 
@@ -164,7 +164,7 @@ a.category-badge > span.badge:hover {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid var(--verydarkpurple);;
     position: absolute;
     top: -10px;
     right: 36px;
@@ -217,7 +217,7 @@ a.category-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: var(--verydarkpurple);;
     border-radius: 0;
 }
 
