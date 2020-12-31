@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}| Blog{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Post -->
+    <div class="row mb-5">
+        {% for post in posts %}
+        <div class="col-8 offset-2 my-3 py-4 jumbotron jumbotron-mobile bg-dark">
+            <h2 class="mt-2">{{ post.title }}</h2>
+            <p>{{ post.date }}</p>
+            <hr/>
+            {% if product.image %}
+            <a href="{% url 'each_post' post.id %}">
+                <img class="img-fluid" width="800" height="600" src="{{ product.image.url }}" alt="{{ post.title }}">
+            </a>
+            {% else %}
+            <a href="{% url 'each_post' post.id %}">
+                <img class="img-fluid" width="800" height="600" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+            </a>
+            {% endif %}
+            <hr/>
+            <p>{{ post.introduction }}</p>
+            <p><a href="{% url 'each_post' post.id %}" class="btn btn-black rounded-0 mt-4">Read more</a></p>
+            <hr/>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
