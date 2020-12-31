@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+/* -----------------   Variables ----------------- */
+
+:root {
+/* --- Colors --- */
+--purple: #15003D;
+--darkpurple: #0E0029;
+--verydarkpurple: #070014;
+--lightgrey: #E4E3E2;
+--white: #ffffff;
+--darkwhite: #f6f6f6f3;
+--lightblack: #252525;
+--black: #000000;
+/* --- Fonts --- */
+--philosopher: 'Philosopher', sans-serif;
+}
+
+
+/* --------------------- Global styles ------------- */
+
 html {
     height: 100%;
     width: 100%;
@@ -5,11 +25,11 @@ html {
 }
 
 body {
-    background: url('/media/pexels-giftpunditscom-1303088.jpg') no-repeat center center fixed;
+    background: url('/media/mini-4.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: black;
-    font-family: 'Inter';
+    color: var(--verydarkpurple);
+    font-family: var(--philosopher);
 }
 
 /* from Bulma */
@@ -48,6 +68,11 @@ body {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+.text-color {
+    color: var(--verydarkpurple);
+    
 }
 
 .text-black {
