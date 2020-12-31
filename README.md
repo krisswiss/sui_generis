@@ -1,5 +1,5 @@
 # Sui Generis
-The live website can be viewed [here](#)  
+The live website can be viewed [here](https://sui-generis.herokuapp.com/)  
 
 Sui Generis meaning “one of a kind” or “unique” is the exact description of this business model.
 
@@ -21,7 +21,7 @@ Stock images have been used for this project but the companies aim would be to o
 
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
-    - [**Features Left to Implement**](#features-left-to-implement)
+    - [**Features Left to Implement and Future development plans**](#features-left-to-implement-and-future-development-plans)
 3. [**Information Architecture**](#information-architecture)
     - [**Database Choice**](#database-choice)
     - [**Data Modelling**](#data-modelling)
@@ -123,7 +123,13 @@ Original wireframes for desktop, tablet and mobile can be found [here](https://g
   * payments are being processed with Stripe
   * confirmation emails are sent to the users
 
-### Features Left to Implement
+### Features Left to Implement / Future development plans
+
+  - I have started a new app called social, which will contain model for social icons, so store staff can change and modify social icons and links.
+  - I would like to include functionality for store staff to update background picture, so they can change it when the theme of hampers change.
+  - I also would like to finish my products functionality, so only in stock products will display.
+  - I would like to add Pagination when there are many products accumulated in the product gallery.
+  - I would like to Add 404 page, for better UX.
 
 ---
 
@@ -196,6 +202,30 @@ order | ForeignKey | Order, null=False, blank=False, on_delete=models.CASCADE, r
 product | ForeignKey | Product, null=False, blank=False, on_delete=models.CASCADE
 quantity | IntegerField | null=False, blank=False, default=0
 lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+
+##### Post
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+title | CharField | max_length=254
+introduction | CharField | max_length=254
+post | TextField | null=False, blank=False
+image_url | URLField | max_length=1024, null=True, blank=True
+image | ImageField | max_length=1024, null=True, blank=True
+date | DateField | auto_now_add=True
+
+##### Faq
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+question | CharField | max_length=254
+answer | TextField | null=False, blank=False
+
+##### Social
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- 
+name | CharField | max_length=50
+weblink | URLField |
+icon | CharField | max_length=50
+
 
 ---
 
