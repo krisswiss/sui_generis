@@ -12,17 +12,18 @@
 {% endblock %}
 
 {% block content %}
+<div class="overlay"></div>
 <div class="container">
     <!-- Post -->
     <div class="row mb-5">
         {% for post in posts %}
-        <div class="col-8 offset-2 my-3 py-4 jumbotron jumbotron-mobile bg-dark">
+        <div class="col-8 offset-2 my-3 py-4 jumbotron jumbotron-mobile bg-white">
             <h2 class="mt-2">{{ post.title }}</h2>
             <p>{{ post.date }}</p>
             <hr/>
-            {% if product.image %}
+            {% if post.image %}
             <a href="{% url 'each_post' post.id %}">
-                <img class="img-fluid" width="800" height="600" src="{{ product.image.url }}" alt="{{ post.title }}">
+                <img class="img-fluid" width="800" height="600" src="{{ post.image.url }}" alt="{{ post.title }}">
             </a>
             {% else %}
             <a href="{% url 'each_post' post.id %}">
@@ -32,6 +33,12 @@
             <hr/>
             <p>{{ post.introduction }}</p>
             <p><a href="{% url 'each_post' post.id %}" class="btn btn-black rounded-0 mt-4">Read more</a></p>
+            {%if request.user.is_superuser or request.user.is_staff %}
+            <small class="ml-3">
+                <a href="{% url 'edit_post' post.id %}">Edit</a> |
+                <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
+            </small>
+            {% endif %}
             <hr/>
         </div>
         {% endfor %}

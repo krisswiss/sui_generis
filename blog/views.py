@@ -74,7 +74,7 @@ def edit_post(request, post_id):
         form = PostForm(instance=blog_post)
         messages.info(request, f'You are editing question: "{blog_post.title}"')
 
-    template = 'faq/edit_post.html'
+    template = 'blog/edit_post.html'
     context = {
         'form': form,
         'blog_post': blog_post,
