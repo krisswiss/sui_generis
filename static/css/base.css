@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    background: url('/media/mini-4.jpg') no-repeat center center fixed;
+    background: url('/media/mini-4a.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: var(--verydarkpurple);
