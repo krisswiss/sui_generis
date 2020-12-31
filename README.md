@@ -123,7 +123,7 @@ Original wireframes for desktop, tablet and mobile can be found [here](https://g
   * payments are being processed with Stripe
   * confirmation emails are sent to the users
 
-### Features Left to Implement / Future development plans
+### Features Left to Implement and Future development plans
 
   - I have started a new app called social, which will contain model for social icons, so store staff can change and modify social icons and links.
   - I would like to include functionality for store staff to update background picture, so they can change it when the theme of hampers change.
@@ -203,6 +203,7 @@ product | ForeignKey | Product, null=False, blank=False, on_delete=models.CASCAD
 quantity | IntegerField | null=False, blank=False, default=0
 lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False
 
+#### Blog App
 ##### Post
 | **Name** | **Field Type** | **Validation** |
 --- | --- | --- 
@@ -213,12 +214,14 @@ image_url | URLField | max_length=1024, null=True, blank=True
 image | ImageField | max_length=1024, null=True, blank=True
 date | DateField | auto_now_add=True
 
+#### FAQ App
 ##### Faq
 | **Name** | **Field Type** | **Validation** |
 --- | --- | --- 
 question | CharField | max_length=254
 answer | TextField | null=False, blank=False
 
+#### Social App
 ##### Social
 | **Name** | **Field Type** | **Validation** |
 --- | --- | --- 
