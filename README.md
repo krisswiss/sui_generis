@@ -358,8 +358,10 @@ In addition to this, I have shared my link with several friends, including activ
 After applying each change I was manually testing every possible scenario to make sure it works. Every possible scenario has also been tested manually after deployment.
 
 ##### Bugs
-##### Unresolved (due to lack of time)
+##### Unresolved (all due to lack of time)
 
+  - Bootstrap grid is not finished on Faq and about us pages
+  - CSS - I have not been able to finish styling my page fully, which I would like to complete, as it does not meet my own personal standards.
   - Footer is not fully responsive
     - it accupies approx 90% of the width of the screen - tried to apply bootstrap class for width, but this didnt Help
   - JavaScript code needs to be moved to external folders - outside of html code
