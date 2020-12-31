@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
 /* -----------------   Variables ----------------- */
 
 :root {
@@ -32,6 +33,7 @@ body {
     font-family: var(--philosopher);
 }
 
+/* --------------------- Buttons ------------- */
 /* from Bulma */
 .icon {
     align-items: center;
@@ -66,7 +68,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: var(--purple);;
+    background: var(--darkpurple);
     color: white;
 }
 
@@ -92,7 +94,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: var(--purple);;
+    background: var(--darkpurple);
     color: white;
 }
 
@@ -101,7 +103,7 @@ body {
 }
 
 .bg-black {
-    background: var(--verydarkpurple); !important;
+    background: var(--verydarkpurple) !important;
 }
 
 .overlay {
@@ -115,7 +117,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: var(--purple) !important;
+    background: var(--darkpurple) !important;
     color: #fff !important;
 }
 
@@ -134,6 +136,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* ------------------------------- footer */
 .footer {
   position: fixed;
   left: 0;
@@ -164,7 +167,7 @@ a.category-badge > span.badge:hover {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid var(--verydarkpurple);;
+    border-bottom: 10px solid var(--verydarkpurple);
     position: absolute;
     top: -10px;
     right: 36px;
@@ -217,7 +220,7 @@ a.category-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content input {
-    border-color: var(--verydarkpurple);;
+    border-color: var(--verydarkpurple);
     border-radius: 0;
 }
 
